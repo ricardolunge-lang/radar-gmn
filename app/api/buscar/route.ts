@@ -9,6 +9,9 @@ export async function POST(req: Request) {
     return NextResponse.json({ erro: "Informe o nicho e a cidade." }, { status: 400 });
   }
   const chave = process.env.GOOGLE_PLACES_API_KEY;
+  if (chave && !process.env.APP_SENHA) {
+    return NextResponse.json({ erro: "Por segurança, defina a variável APP_SENHA no Vercel antes de usar a chave do Google." }, { status: 503 });
+  }
   try {
     const empresas = chave ? await buscarGoogle(`${nicho} em ${cidade}`, chave) : gerarDemo(nicho, cidade);
     const resultado = empresas.map(analisar).sort((a, b) => b.score - a.score);

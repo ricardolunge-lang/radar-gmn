@@ -7,6 +7,7 @@ Prospecção por Google Meu Negócio: busca empresas por nicho e cidade, lê o p
     cp .env.example .env.local   # coloque a GOOGLE_PLACES_API_KEY
     npm run dev
 
+Com a chave do Google, defina também APP_SENHA: o navegador pede uma senha pra entrar (o usuário pode ser qualquer um).
 Sem a chave, o app roda em modo demonstração com dados fictícios.
 
 ## Onde mexer

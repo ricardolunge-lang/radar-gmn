@@ -14,3 +14,6 @@ Sem a chave, o app roda em modo demonstração com dados fictícios.
 - lib/score.ts  → regras do score, textos dos problemas e mensagem de WhatsApp
 - lib/google.ts → busca na Places API (New), até 60 empresas por busca
 - app/page.tsx  → tela
+
+## Produção
+https://radar-gmn.vercel.app (variáveis GOOGLE_PLACES_API_KEY e APP_SENHA configuradas no Vercel)
